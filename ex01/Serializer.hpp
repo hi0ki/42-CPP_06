@@ -3,6 +3,11 @@
 
 	#include <iostream>
 
+	typedef struct s_data
+	{
+		std::string myname;
+		int myage;
+	} Data;
 
 	class Serializer {
 		private:
