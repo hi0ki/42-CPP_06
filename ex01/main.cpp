@@ -3,9 +3,13 @@
 int main()
 {
 	Data *data = new Data();
+	data->myname = "John";
+	data->myage = 42;
+	uintptr_t var = Serializer::serialize(data);
 
-	uintptr_t *var = Serializer :: serialize(data);
+	Data *data2 = Serializer::deserialize(var);
+	std::cout << "Name2: " << data2->myname << std::endl;
 
-	
+	delete data;
 	return 0;
 }
