@@ -10,6 +10,9 @@ int main()
 	Data *data2 = Serializer::deserialize(var);
 	std::cout << "Name2: " << data2->myname << std::endl;
 
+	std::cout << "data address: " << data << std::endl;
+	std::cout << "data2 address: " << data2 << std::endl;
+
 	delete data;
 	return 0;
 }
