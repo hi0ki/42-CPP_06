@@ -152,7 +152,11 @@ int check_if_double(std::string str)
 
 void print_IntOrChar(char *str)
 {
-	int		i = atoi(str);
+	int i;
+	if (CheckIfChar(str))
+		i = static_cast<int>(str[0]);
+	else
+		i = atoi(str);
 	float	f = static_cast<float>(i);
 	double	d = static_cast<double>(i);
 	char	c = static_cast<char>(i);
