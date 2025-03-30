@@ -1,32 +1,32 @@
-// #include <iostream>
+#include <iostream>
 
 
-// class base
-// {
-// 	public:
-// 		virtual void function()
-// 		{
-// 			std::cout << "chti\n";
-// 		}
-// };
+class base
+{
+	public:
+		virtual void function()
+		{
+			std::cout << "chti\n";
+		}
+};
 
-// class child1 : public base
-// {
+class child1 : public base
+{
 
-// };
+};
 
-// class child2 : public base
-// {
+class child2 : public base
+{
 
-// };
+};
 
-// int main()
-// {
-// 	child1 &child;
-// 	base bs = dynamic_cast<base &>(child);
-// 	std::cout << &child << std::endl;
-// 	chd2->function();
-// }
+int main()
+{
+	base *bs = new base();
+	child1 *chid = dynamic_cast<child1 *>(bs);
+	std::cout << chid << std::endl;
+	std::cout << bs << std::endl;
+}
 
 
 
@@ -53,21 +53,50 @@
 // }
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    int n = 88;
+// int main() {
+//     int n = 88;
   
-    // Store the address of number in nptr
-    int* nptr = &n;
+//     // Store the address of number in nptr
+//     int* nptr = &n;
 
-    // Reinterpreting the pointer as a char pointer
-    char* charptr = reinterpret_cast<char*>(nptr);
+//     // Reinterpreting the pointer as a char pointer
+//     char* charptr = reinterpret_cast<char*>(nptr);
 
-    // Printing the memory addresses and values
-    cout << "Integer Address: " << &nptr << endl;
-    cout << "Char Address: " << charptr;
+//     // Printing the memory addresses and values
+//     cout << "Integer Address: " << &nptr << endl;
+//     cout << "Char Address: " << charptr;
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <cstdint>
+
+// int main() {
+//     int value = 42;
+//     int* ptr = &value;
+
+//     uintptr_t numericAddress = reinterpret_cast<uintptr_t>(ptr);
+
+//     std::cout << "Original Pointer Address: " << ptr << std::endl;
+//     std::cout << "Numeric Address (uintptr_t): " << numericAddress << std::endl;
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// using namespace std;
+ 
+// int main()
+// {
+//     int p =66;
+//     char* ch = reinterpret_cast<char*>(p);
+//     std::cout << *ch << std::endl;
+//     cout << p << endl;
+//     return 0;
+// }
